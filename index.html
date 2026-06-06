@@ -1,114 +1,285 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sukan Muhibbah ILKBS 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Sukan Muhibbah ILKBS 2026</title>
 
-    <style>
-        body{
-            font-family: 'Segoe UI', sans-serif;
-        }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        .hero{
-            min-height:100vh;
-            background: linear-gradient(135deg,#ff512f,#ff7b00);
-            color:white;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-        }
-
-        .hero h1{
-            font-size:4rem;
-            font-weight:800;
-        }
-
-        .btn-main{
-            margin:5px;
-            border-radius:30px;
-            padding:12px 25px;
-        }
-
-        .section{
-            padding:80px 20px;
-        }
-
-        .card{
-            border:none;
-            border-radius:20px;
-            box-shadow:0 3px 15px rgba(0,0,0,0.1);
-        }
-    </style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            ILKBS 2026
-        </a>
+<!-- NAVBAR -->
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+<div class="container">
 
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#livescore">Live Score</a></li>
-                <li class="nav-item"><a class="nav-link" href="#jadual">Jadual</a></li>
-                <li class="nav-item"><a class="nav-link" href="#penginapan">Penginapan</a></li>
-                <li class="nav-item"><a class="nav-link" href="#katering">Katering</a></li>
-                <li class="nav-item"><a class="nav-link" href="#peta">Peta</a></li>
-                <li class="nav-item"><a class="nav-link" href="#urusetia">Urusetia</a></li>
-            </ul>
-        </div>
-    </div>
+<a class="navbar-brand d-flex align-items-center" href="#">
+
+<img src="images/logo-kbs.png" class="logo me-2">
+
+<img src="images/logo-ilkbs.png" class="logo me-2">
+
+<span>Zon Pantai Timur</span>
+
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#livescore">Live Score</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#jadual">Jadual</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#syarat">Syarat</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#urusetia">Urusetia</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
 </nav>
+
+
+<!-- HERO -->
 
 <section id="home" class="hero">
 
-<div class="container">
+<div class="overlay"></div>
 
-<h1>SUKAN MUHIBBAH<br>ILKBS 2026</h1>
+<div class="container hero-content">
 
-<h4>Lawan Tetap Kawan</h4>
+<div class="row align-items-center">
 
-<p>12 - 14 Jun 2026<br>IKBN Pekan</p>
+<div class="col-lg-12 text-center">
 
-<a href="#livescore" class="btn btn-light btn-main">
-🏆 Live Score
+<h1>
+SUKAN MUHIBBAH
+<br>
+ILKBS 2026
+</h1>
+
+<h3>Lawan Tetap Kawan</h3>
+
+<p class="hero-date">
+23 - 25 Oktober 2026
+<br>
+IKBN Pekan
+</p>
+
+<div id="countdown"></div>
+
+<div class="mt-4">
+
+<a href="#livescore" class="btn btn-warning btn-lg m-2">
+Live Score
 </a>
 
-<a href="#jadual" class="btn btn-outline-light btn-main">
-📅 Jadual
+<a href="#jadual" class="btn btn-light btn-lg m-2">
+Jadual
 </a>
 
 </div>
 
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
 
 <section id="livescore" class="section">
 
 <div class="container">
 
-<h2>🏆 Live Score</h2>
+<h2 class="section-title">
+🏆 Live Score
+</h2>
 
-<p>Bahagian ini akan disambungkan dengan Google Sheets.</p>
+<div class="ratio ratio-16x9">
+
+<iframe
+src="https://docs.google.com/spreadsheets/d/17N7YiwIFVp7z97-4aGp2DZ36Dq1uYAwDCfvKNDifgik/edit?gid=1771657133"
+allowfullscreen>
+</iframe>
+
+</div>
 
 </div>
 
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<section id="jadual" class="section bg-light">
+
+<div class="container">
+
+<h2 class="section-title">
+📅 Jadual Keseluruhan
+</h2>
+
+<div class="ratio ratio-16x9">
+
+<iframe
+src="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/edit"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="syarat" class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+📂 Dokumen Program
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<a class="doc-card"
+href="https://drive.google.com/drive/folders/1UJWfTYH3HaBGXZ5WXXwfd76-94Y77nRG?usp=sharing"
+target="_blank">
+
+📜 Syarat Pertandingan
+
+</a>
+</div>
+
+<div class="col-md-3">
+<a class="doc-card"
+href="https://drive.google.com/drive/folders/1CpaWWd8HOH5rU_zF_2aMOrO3-OtX_Bt6?usp=sharing"
+target="_blank">
+
+📝 Borang Pendaftaran
+
+</a>
+</div>
+
+<div class="col-md-3">
+<a class="doc-card"
+href="https://docs.google.com/presentation/d/1AEcVRj52wUTTj7hyUuwv35lEOFEmuRMB/edit"
+target="_blank">
+
+🎤 Slide Teknikal
+
+</a>
+</div>
+
+<div class="col-md-3">
+<a class="doc-card"
+href="https://drive.google.com/drive/folders/177Q4yRBA2HphSubbJYooK2lf3HlQ-rAT?usp=sharing"
+target="_blank">
+
+🏆 Logo Kelab ILKBS
+
+</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="urusetia" class="section bg-light">
+
+<div class="container">
+
+<h2 class="section-title">
+☎ Urusetia
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="card urusetia-card">
+<h5>Pegawai 1</h5>
+<p>01X-XXXXXXX</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card urusetia-card">
+<h5>Pegawai 2</h5>
+<p>01X-XXXXXXX</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card urusetia-card">
+<h5>Pegawai 3</h5>
+<p>01X-XXXXXXX</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card urusetia-card">
+<h5>Pegawai 4</h5>
+<p>01X-XXXXXXX</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+Sukan Muhibbah ILKBS 2026
+<br>
+Zon Pantai Timur
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
