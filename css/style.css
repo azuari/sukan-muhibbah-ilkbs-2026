@@ -41,41 +41,19 @@ body{
 .hero{
     position:relative;
     min-height:100vh;
+    overflow:hidden;
     display:flex;
     align-items:center;
     justify-content:center;
+    text-align:center;
     color:white;
-    overflow:hidden;
 }
 
-.hero::before{
-    content:"";
+.hero-overlay{
     position:absolute;
     inset:0;
-
-    background:
-    linear-gradient(
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.55)
-    ),
-
-    url("../images/futsal.png"),
-    url("../images/bola-tampar.png"),
-    url("../images/dewan-serbaguna.png");
-
-    background-size:
-    cover,
-    40%,
-    35%,
-    35%;
-
-    background-position:
-    center,
-    left center,
-    center center,
-    right center;
-
-    background-repeat:no-repeat;
+    background:rgba(0,0,0,0.45);
+    z-index:1;
 }
 
 .hero-content{
@@ -83,20 +61,15 @@ body{
     z-index:2;
 }
 
-.hero h1{
+.hero-content h1{
     font-size:5rem;
     font-weight:900;
-    text-shadow:0 4px 10px rgba(0,0,0,0.4);
+    text-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
-.hero h3{
-    margin-top:20px;
-    font-weight:300;
-}
-
-.hero-date{
-    margin-top:25px;
-    font-size:1.3rem;
+.hero-content h2{
+    font-size:3rem;
+    font-weight:700;
 }
 
 /* COUNTDOWN */
