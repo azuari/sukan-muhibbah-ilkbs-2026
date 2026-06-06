@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.custom-nav{
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(8px);
+}
+
+.logo{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+}
+
+.nav-link{
+    font-weight:600;
+    margin-left:10px;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)
+    ),
+
+    url("../images/futsal.png"),
+    url("../images/bola-tampar.png"),
+    url("../images/dewan-serbaguna.png");
+
+    background-size:
+    cover,
+    40%,
+    35%,
+    35%;
+
+    background-position:
+    center,
+    left center,
+    center center,
+    right center;
+
+    background-repeat:no-repeat;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-weight:900;
+    text-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+.hero h3{
+    margin-top:20px;
+    font-weight:300;
+}
+
+.hero-date{
+    margin-top:25px;
+    font-size:1.3rem;
+}
+
+/* COUNTDOWN */
+
+#countdown{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.count-box{
+    background:white;
+    color:#222;
+    padding:15px;
+    min-width:90px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.count-box h3{
+    margin:0;
+    font-weight:700;
+}
+
+/* SECTION */
+
+.section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+/* DOCUMENT CARD */
+
+.doc-card{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:white;
+    color:#222;
+    padding:30px 20px;
+    border-radius:20px;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.doc-card:hover{
+    transform:translateY(-5px);
+}
+
+/* URUSETIA */
+
+.urusetia-card{
+    text-align:center;
+    padding:25px;
+    border:none;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+    min-height:100vh;
+}
+
+.hero::before{
+
+background:
+linear-gradient(
+rgba(0,0,0,0.6),
+rgba(0,0,0,0.6)
+),
+
+url("../images/dewan-serbaguna.png");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero h3{
+    font-size:1.1rem;
+}
+
+.hero-date{
+    font-size:1rem;
+}
+
+.logo{
+    width:35px;
+    height:35px;
+}
+
+.count-box{
+    min-width:70px;
+    padding:10px;
+}
+
+}
