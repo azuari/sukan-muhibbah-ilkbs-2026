@@ -1,29 +1,41 @@
+/* =========================
+   SUKAN MUHIBBAH ILKBS 2026
+   PREMIUM STYLE
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
     scroll-behavior:smooth;
 }
 
 body{
     font-family:'Segoe UI',sans-serif;
+    background:#ececec;
+    color:#222;
     overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 .custom-navbar{
-    background: rgba(0,0,0,0.75);
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+    transition:0.3s;
 }
 
 .logo{
     height:60px;
     width:auto;
+}
+
+.navbar-brand span{
+    color:white;
+    font-size:1.2rem;
+    font-weight:600;
 }
 
 .navbar-nav .nav-link{
@@ -36,29 +48,69 @@ body{
     color:#ffc107 !important;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     position:relative;
     min-height:100vh;
-    overflow:hidden;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    color:white;
+    overflow:hidden;
 }
 
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,0.55);
     z-index:1;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    animation:zoom 20s infinite;
+}
+
+.hero1{
+    background-image:url("../images/futsal.png");
+    z-index:0;
+}
+
+.hero2{
+    background-image:url("../images/bola-tampar.png");
+    z-index:-1;
+}
+
+.hero3{
+    background-image:url("../images/dewan-serbaguna.png");
+    z-index:-2;
+}
+
+@keyframes zoom{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
 }
 
 .hero-content{
     position:relative;
-    z-index:2;
+    z-index:5;
+    color:white;
+    max-width:900px;
 }
 
 .hero-content h1{
@@ -70,33 +122,51 @@ body{
 .hero-content h2{
     font-size:3rem;
     font-weight:700;
+    margin-bottom:20px;
 }
 
-/* COUNTDOWN */
-
-#countdown{
-    margin-top:25px;
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+.tagline{
+    font-size:2rem;
+    margin-bottom:15px;
 }
 
-.count-box{
-    background:white;
-    color:#222;
-    padding:15px;
-    min-width:90px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+.hero-date{
+    font-size:1.4rem;
+    margin-bottom:30px;
 }
 
-.count-box h3{
-    margin:0;
+.hero-buttons .btn{
+    margin:10px;
+    padding:14px 30px;
+    border-radius:40px;
     font-weight:700;
 }
 
-/* SECTION */
+/* =========================
+   COUNTDOWN
+========================= */
+
+#countdown{
+    display:none;
+}
+
+/* Mobile sahaja */
+
+@media(max-width:768px){
+
+    #countdown{
+        display:block;
+        margin-top:20px;
+        margin-bottom:20px;
+        font-size:1.1rem;
+        font-weight:600;
+    }
+
+}
+
+/* =========================
+   SECTION
+========================= */
 
 .section{
     padding:90px 0;
@@ -104,89 +174,178 @@ body{
 
 .section-title{
     text-align:center;
-    font-weight:700;
-    margin-bottom:40px;
+    font-size:3rem;
+    font-weight:800;
+    margin-bottom:50px;
 }
 
-/* DOCUMENT CARD */
+/* =========================
+   GOOGLE SHEET
+========================= */
+
+.sheet-frame{
+    width:100%;
+    height:700px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   VENUE
+========================= */
+
+.venue-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+    height:100%;
+}
+
+.venue-card:hover{
+    transform:translateY(-8px);
+}
+
+.venue-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.venue-card h4{
+    padding:20px 20px 10px;
+    font-weight:700;
+}
+
+.venue-card p{
+    padding:0 20px 20px;
+}
+
+/* =========================
+   DOKUMEN
+========================= */
 
 .doc-card{
     display:block;
-    text-align:center;
     text-decoration:none;
     background:white;
     color:#222;
-    padding:30px 20px;
+    padding:35px;
     border-radius:20px;
+    text-align:center;
+    font-size:1.2rem;
+    font-weight:600;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
     transition:0.3s;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
 .doc-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
+    color:black;
 }
 
-/* URUSETIA */
+/* =========================
+   BUTTON
+========================= */
 
-.urusetia-card{
-    text-align:center;
-    padding:25px;
+.btn-dark,
+.btn-warning{
+    border-radius:40px;
+    padding:14px 30px;
+}
+
+/* =========================
+   MAP
+========================= */
+
+.map-frame{
+    width:100%;
+    height:500px;
     border:none;
     border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* FOOTER */
+/* =========================
+   STAFF
+========================= */
+
+.staff-card{
+    background:white;
+    border-radius:20px;
+    padding:40px 20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.staff-card:hover{
+    transform:translateY(-8px);
+}
+
+.staff-card h4{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#111;
     color:white;
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
 }
 
-/* MOBILE */
+footer p{
+    margin-bottom:8px;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
 
-.hero{
-    min-height:100vh;
-}
+    .logo{
+        height:45px;
+    }
 
-.hero::before{
+    .navbar-brand span{
+        font-size:1rem;
+    }
 
-background:
-linear-gradient(
-rgba(0,0,0,0.6),
-rgba(0,0,0,0.6)
-),
+    .hero-content h1{
+        font-size:3rem;
+    }
 
-url("../images/dewan-serbaguna.png");
+    .hero-content h2{
+        font-size:2rem;
+    }
 
-background-size:cover;
-background-position:center;
-}
+    .tagline{
+        font-size:1.3rem;
+    }
 
-.hero h1{
-    font-size:2.5rem;
-}
+    .hero-date{
+        font-size:1rem;
+    }
 
-.hero h3{
-    font-size:1.1rem;
-}
+    .section-title{
+        font-size:2rem;
+    }
 
-.hero-date{
-    font-size:1rem;
-}
+    .sheet-frame{
+        height:500px;
+    }
 
-.logo{
-    width:35px;
-    height:35px;
-}
-
-.count-box{
-    min-width:70px;
-    padding:10px;
-}
+    .map-frame{
+        height:350px;
+    }
 
 }
