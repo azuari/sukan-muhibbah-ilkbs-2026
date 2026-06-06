@@ -1,54 +1,64 @@
 const targetDate = new Date("October 23, 2026 08:00:00").getTime();
 
-function updateCountdown(){
+function updateCountdown() {
 
-const now = new Date().getTime();
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
-const distance = targetDate - now;
+    if (distance < 0) {
 
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById("countdown").innerHTML = `
+        <div class="countdown-ended">
+            SUKAN MUHIBBAH ILKBS 2026 TELAH BERMULA
+        </div>
+        `;
 
-const hours = Math.floor(
-(distance % (1000 * 60 * 60 * 24))
-/
-(1000 * 60 * 60)
-);
+        return;
+    }
 
-const minutes = Math.floor(
-(distance % (1000 * 60 * 60))
-/
-(1000 * 60)
-);
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
 
-const seconds = Math.floor(
-(distance % (1000 * 60))
-/
-1000
-);
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
 
-document.getElementById("countdown").innerHTML = `
-<div class="countdown-box">
-<h2>${days}</h2>
-<span>Hari</span>
-</div>
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
 
-<div class="countdown-box">
-<h2>${hours}</h2>
-<span>Jam</span>
-</div>
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
 
-<div class="countdown-box">
-<h2>${minutes}</h2>
-<span>Minit</span>
-</div>
+    document.getElementById("countdown").innerHTML = `
 
-<div class="countdown-box">
-<h2>${seconds}</h2>
-<span>Saat</span>
-</div>
-`;
+    <div class="countdown-box">
+        <h2>${days}</h2>
+        <span>Hari</span>
+    </div>
+
+    <div class="countdown-box">
+        <h2>${hours}</h2>
+        <span>Jam</span>
+    </div>
+
+    <div class="countdown-box">
+        <h2>${minutes}</h2>
+        <span>Minit</span>
+    </div>
+
+    <div class="countdown-box">
+        <h2>${seconds}</h2>
+        <span>Saat</span>
+    </div>
+
+    `;
 }
 
-setInterval(updateCountdown,1000);
-
 updateCountdown();
+setInterval(updateCountdown, 1000);
