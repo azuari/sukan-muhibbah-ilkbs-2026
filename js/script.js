@@ -27,24 +27,24 @@ const seconds = Math.floor(
 );
 
 document.getElementById("countdown").innerHTML = `
-<div class="count-box">
-<h3>${days}</h3>
-Hari
+<div class="countdown-box">
+<h2>${days}</h2>
+<span>Hari</span>
 </div>
 
-<div class="count-box">
-<h3>${hours}</h3>
-Jam
+<div class="countdown-box">
+<h2>${hours}</h2>
+<span>Jam</span>
 </div>
 
-<div class="count-box">
-<h3>${minutes}</h3>
-Minit
+<div class="countdown-box">
+<h2>${minutes}</h2>
+<span>Minit</span>
 </div>
 
-<div class="count-box">
-<h3>${seconds}</h3>
-Saat
+<div class="countdown-box">
+<h2>${seconds}</h2>
+<span>Saat</span>
 </div>
 `;
 }
