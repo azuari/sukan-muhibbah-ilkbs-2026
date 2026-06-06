@@ -138,39 +138,64 @@ section{
    COUNTDOWN
 ========================= */
 
-.countdown-container{
+/* =========================
+   COUNTDOWN MAIN
+========================= */
+
+#countdown{
     display:flex;
     justify-content:center;
     align-items:center;
     gap:20px;
     flex-wrap:wrap;
-    margin-top:40px;
+    margin-top:35px;
+}
+
+.countdown-ended{
+    background:#ffc107;
+    color:#000;
+    padding:15px 25px;
+    border-radius:15px;
+    font-weight:700;
 }
 
 .countdown-box{
-    width:130px;
+
+    width:120px;
     height:120px;
 
     background:white;
-    color:#222;
+    color:#111;
 
-    border-radius:20px;
+    border-radius:25px;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 
-    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+}
+
+.countdown-box:hover{
+    transform:translateY(-5px);
 }
 
 .countdown-box h2{
+
     font-size:3rem;
-    font-weight:800;
+    font-weight:900;
+    margin:0;
+
+    color:#111;
 }
 
 .countdown-box span{
+
     font-size:1rem;
+    color:#666;
 }
 
 /* =========================
