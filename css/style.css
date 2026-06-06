@@ -15,20 +15,25 @@ body{
 
 /* NAVBAR */
 
-.custom-nav{
-    background:rgba(0,0,0,0.85);
-    backdrop-filter:blur(8px);
+.custom-navbar{
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
 }
 
 .logo{
-    width:45px;
-    height:45px;
-    object-fit:contain;
+    height:60px;
+    width:auto;
 }
 
-.nav-link{
+.navbar-nav .nav-link{
+    color:white !important;
     font-weight:600;
-    margin-left:10px;
+    margin-left:15px;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#ffc107 !important;
 }
 
 /* HERO */
