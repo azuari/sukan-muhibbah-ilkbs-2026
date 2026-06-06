@@ -200,28 +200,33 @@ body{
     background:white;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
     transition:0.3s;
     height:100%;
 }
 
 .venue-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .venue-card img{
     width:100%;
-    height:250px;
+    height:220px;
     object-fit:cover;
 }
 
-.venue-card h4{
-    padding:20px 20px 10px;
-    font-weight:700;
+.venue-content{
+    padding:20px;
 }
 
-.venue-card p{
-    padding:0 20px 20px;
+.venue-content h4{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.venue-content p{
+    color:#666;
+    font-size:0.95rem;
 }
 
 /* =========================
