@@ -1,51 +1,84 @@
 /* =========================
-   SUKAN MUHIBBAH ILKBS 2026
-   PREMIUM STYLE
+   GLOBAL
 ========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
     font-family:'Segoe UI',sans-serif;
-    background:#ececec;
+    background:#f4f5f7;
     color:#222;
     overflow-x:hidden;
+}
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
 }
 
 /* =========================
    NAVBAR
 ========================= */
 
-.custom-navbar{
-    background:rgba(0,0,0,0.75);
-    backdrop-filter:blur(10px);
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(8px);
+}
+
+.navbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 30px;
+}
+
+.logo-group{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-group img{
+    height:70px;
+}
+
+.site-title{
+    color:white;
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
     transition:0.3s;
 }
 
-.logo{
-    height:60px;
-    width:auto;
-}
-
-.navbar-brand span{
-    color:white;
-    font-size:1.2rem;
-    font-weight:600;
-}
-
-.navbar-nav .nav-link{
-    color:white !important;
-    font-weight:600;
-    margin-left:15px;
-}
-
-.navbar-nav .nav-link:hover{
-    color:#ffc107 !important;
+.nav-links a:hover{
+    color:#ffc107;
 }
 
 /* =========================
@@ -55,245 +88,268 @@ body{
 .hero{
     position:relative;
     min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)
+    ),
+    url('../images/futsal.png');
+
+    background-size:cover;
+    background-position:center;
+
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    overflow:hidden;
-}
 
-.hero-overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.55);
-    z-index:1;
-}
-
-.hero-bg{
-    position:absolute;
-    inset:0;
-    background-size:cover;
-    background-position:center;
-    animation:zoom 20s infinite;
-}
-
-.hero1{
-    background-image:url("../images/futsal.png");
-    z-index:0;
-}
-
-.hero2{
-    background-image:url("../images/bola-tampar.png");
-    z-index:-1;
-}
-
-.hero3{
-    background-image:url("../images/dewan-serbaguna.png");
-    z-index:-2;
-}
-
-@keyframes zoom{
-    0%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.08);
-    }
-
-    100%{
-        transform:scale(1);
-    }
+    color:white;
 }
 
 .hero-content{
-    position:relative;
-    z-index:5;
-    color:white;
-    max-width:900px;
+    max-width:1000px;
+    padding:20px;
 }
 
-.hero-content h1{
-    font-size:5rem;
+.hero h1{
+    font-size:6rem;
     font-weight:900;
     text-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
-.hero-content h2{
-    font-size:3rem;
+.hero h2{
+    font-size:3.5rem;
+    margin-top:10px;
     font-weight:700;
-    margin-bottom:20px;
 }
 
-.tagline{
-    font-size:2rem;
-    margin-bottom:15px;
+.hero-tagline{
+    margin-top:25px;
+    font-size:1.8rem;
 }
 
 .hero-date{
-    font-size:1.4rem;
-    margin-bottom:30px;
-}
-
-.hero-buttons .btn{
-    margin:10px;
-    padding:14px 30px;
-    border-radius:40px;
-    font-weight:700;
+    margin-top:20px;
+    font-size:1.3rem;
 }
 
 /* =========================
    COUNTDOWN
 ========================= */
 
-#countdown{
-    display:none;
+.countdown-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:40px;
 }
 
-/* Mobile sahaja */
+.countdown-box{
+    width:130px;
+    height:120px;
 
-@media(max-width:768px){
-
-    #countdown{
-        display:block;
-        margin-top:20px;
-        margin-bottom:20px;
-        font-size:1.1rem;
-        font-weight:600;
-    }
-
-}
-
-/* =========================
-   SECTION
-========================= */
-
-.section{
-    padding:90px 0;
-}
-
-.section-title{
-    text-align:center;
-    font-size:3rem;
-    font-weight:800;
-    margin-bottom:50px;
-}
-
-/* =========================
-   GOOGLE SHEET
-========================= */
-
-.sheet-frame{
-    width:100%;
-    height:700px;
-    border:none;
-    border-radius:20px;
-    background:white;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* =========================
-   VENUE
-========================= */
-
-.venue-card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    transition:0.3s;
-    height:100%;
-}
-
-.venue-card:hover{
-    transform:translateY(-10px);
-}
-
-.venue-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.venue-content{
-    padding:20px;
-}
-
-.venue-content h4{
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.venue-content p{
-    color:#666;
-    font-size:0.95rem;
-}
-
-/* =========================
-   DOKUMEN
-========================= */
-
-.doc-card{
-    display:block;
-    text-decoration:none;
     background:white;
     color:#222;
-    padding:35px;
+
     border-radius:20px;
-    text-align:center;
-    font-size:1.2rem;
-    font-weight:600;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.countdown-box h2{
+    font-size:3rem;
+    font-weight:800;
+}
+
+.countdown-box span{
+    font-size:1rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.btn-main{
+    display:inline-block;
+    text-decoration:none;
+
+    padding:14px 30px;
+    margin:5px;
+
+    border-radius:15px;
+    font-weight:700;
+
     transition:0.3s;
 }
 
-.doc-card:hover{
-    transform:translateY(-8px);
+.btn-yellow{
+    background:#ffc107;
     color:black;
 }
 
+.btn-white{
+    background:white;
+    color:black;
+}
+
+.btn-main:hover{
+    transform:translateY(-3px);
+}
+
 /* =========================
-   BUTTON
+   SECTION TITLE
 ========================= */
 
-.btn-dark,
-.btn-warning{
-    border-radius:40px;
-    padding:14px 30px;
+.section-title{
+    text-align:center;
+    font-size:4rem;
+    margin-bottom:50px;
+    font-weight:900;
+}
+
+/* =========================
+   LIVE SCORE
+========================= */
+
+.live-score iframe{
+    width:100%;
+    height:900px;
+
+    border:none;
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   LOCATION CARDS
+========================= */
+
+.location-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+}
+
+.location-card{
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.location-card:hover{
+    transform:translateY(-10px);
+}
+
+.location-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.location-content{
+    padding:25px;
+}
+
+.location-content h3{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.location-content p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* =========================
+   DOCUMENTS
+========================= */
+
+.document-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.document-card{
+    background:white;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    text-decoration:none;
+    color:#222;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.document-card:hover{
+    transform:translateY(-8px);
+}
+
+.document-card h4{
+    margin-top:10px;
+}
+
+/* =========================
+   URUSETIA
+========================= */
+
+.staff-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.staff-card{
+    background:white;
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.staff-card h3{
+    margin-bottom:15px;
+}
+
+.staff-card p{
+    color:#555;
 }
 
 /* =========================
    MAP
 ========================= */
 
-.map-frame{
+.map-container iframe{
     width:100%;
     height:500px;
     border:none;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* =========================
-   STAFF
-========================= */
-
-.staff-card{
-    background:white;
-    border-radius:20px;
-    padding:40px 20px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.staff-card:hover{
-    transform:translateY(-8px);
-}
-
-.staff-card h4{
-    font-weight:700;
-    margin-bottom:10px;
+    border-radius:25px;
 }
 
 /* =========================
@@ -303,12 +359,18 @@ body{
 footer{
     background:#111;
     color:white;
+
     text-align:center;
+
     padding:40px 20px;
 }
 
+footer h4{
+    margin-bottom:10px;
+}
+
 footer p{
-    margin-bottom:8px;
+    color:#ccc;
 }
 
 /* =========================
@@ -317,40 +379,78 @@ footer p{
 
 @media(max-width:768px){
 
-    .logo{
-        height:45px;
+    .navbar-container{
+        flex-direction:column;
+        gap:15px;
     }
 
-    .navbar-brand span{
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .logo-group img{
+        height:50px;
+    }
+
+    .site-title{
         font-size:1rem;
     }
 
-    .hero-content h1{
-        font-size:3rem;
+    .hero{
+        min-height:100vh;
+        padding-top:120px;
     }
 
-    .hero-content h2{
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .hero h2{
         font-size:2rem;
     }
 
-    .tagline{
-        font-size:1.3rem;
+    .hero-tagline{
+        font-size:1.2rem;
     }
 
     .hero-date{
         font-size:1rem;
     }
 
+    /* countdown mobile kekal horizontal */
+
+    .countdown-container{
+        flex-direction:row;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .countdown-box{
+        width:75px;
+        height:75px;
+    }
+
+    .countdown-box h2{
+        font-size:1.6rem;
+    }
+
+    .countdown-box span{
+        font-size:0.75rem;
+    }
+
     .section-title{
-        font-size:2rem;
+        font-size:2.3rem;
     }
 
-    .sheet-frame{
-        height:500px;
+    .location-card img{
+        height:220px;
     }
 
-    .map-frame{
-        height:350px;
+    .live-score iframe{
+        height:600px;
     }
 
 }
