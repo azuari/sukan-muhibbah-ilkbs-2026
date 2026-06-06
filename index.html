@@ -6,104 +6,86 @@
 
 <title>Sukan Muhibbah ILKBS 2026</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="css/style.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+
 <div class="container">
 
 <a class="navbar-brand d-flex align-items-center" href="#">
 
 <img src="images/logo-kbs.png" class="logo me-2">
-
-<img src="images/logo-ilkbs.png" class="logo me-2">
+<img src="images/logo-ilkbs.png" class="logo me-3">
 
 <span>Zon Pantai Timur</span>
 
 </a>
 
-<button class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
-
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
 <span class="navbar-toggler-icon"></span>
-
 </button>
 
 <div class="collapse navbar-collapse" id="menu">
 
 <ul class="navbar-nav ms-auto">
 
-<li class="nav-item">
-<a class="nav-link" href="#home">Home</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#livescore">Live Score</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#jadual">Jadual</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#syarat">Syarat</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#urusetia">Urusetia</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#livescore">Live Score</a></li>
+<li class="nav-item"><a class="nav-link" href="#jadual">Jadual</a></li>
+<li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
+<li class="nav-item"><a class="nav-link" href="#dokumen">Dokumen</a></li>
+<li class="nav-item"><a class="nav-link" href="#urusetia">Urusetia</a></li>
 
 </ul>
 
 </div>
 
 </div>
-</nav>
 
+</nav>
 
 <!-- HERO -->
 
 <section id="home" class="hero">
 
-<div class="overlay"></div>
+<div class="hero-overlay"></div>
+
+<div class="hero-bg hero1"></div>
+<div class="hero-bg hero2"></div>
+<div class="hero-bg hero3"></div>
 
 <div class="container hero-content">
 
-<div class="row align-items-center">
+<h1>SUKAN MUHIBBAH</h1>
 
-<div class="col-lg-12 text-center">
+<h2>ILKBS 2026</h2>
 
-<h1>
-SUKAN MUHIBBAH
-<br>
-ILKBS 2026
-</h1>
-
-<h3>Lawan Tetap Kawan</h3>
+<p class="tagline">
+Lawan Tetap Kawan
+</p>
 
 <p class="hero-date">
-23 - 25 Oktober 2026
-<br>
+23 - 25 Oktober 2026<br>
 IKBN Pekan
 </p>
 
 <div id="countdown"></div>
 
-<div class="mt-4">
+<div class="hero-buttons">
 
-<a href="#livescore" class="btn btn-warning btn-lg m-2">
+<a href="#livescore" class="btn btn-warning btn-lg">
 Live Score
 </a>
 
-<a href="#jadual" class="btn btn-light btn-lg m-2">
+<a href="#jadual" class="btn btn-light btn-lg">
 Jadual
 </a>
 
@@ -111,13 +93,9 @@ Jadual
 
 </div>
 
-</div>
-
-</div>
-
 </section>
 
-
+<!-- LIVE SCORE -->
 
 <section id="livescore" class="section">
 
@@ -127,20 +105,16 @@ Jadual
 🏆 Live Score
 </h2>
 
-<div class="ratio ratio-16x9">
-
 <iframe
-src="https://docs.google.com/spreadsheets/d/17N7YiwIFVp7z97-4aGp2DZ36Dq1uYAwDCfvKNDifgik/edit?gid=1771657133"
-allowfullscreen>
+class="sheet-frame"
+src="https://docs.google.com/spreadsheets/d/17N7YiwIFVp7z97-4aGp2DZ36Dq1uYAwDCfvKNDifgik/edit?usp=sharing">
 </iframe>
-
-</div>
 
 </div>
 
 </section>
 
-
+<!-- JADUAL -->
 
 <section id="jadual" class="section bg-light">
 
@@ -150,12 +124,71 @@ allowfullscreen>
 📅 Jadual Keseluruhan
 </h2>
 
-<div class="ratio ratio-16x9">
-
 <iframe
-src="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/edit"
-allowfullscreen>
+class="sheet-frame"
+src="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/edit?usp=sharing">
 </iframe>
+
+</div>
+
+</section>
+
+<!-- LOKASI -->
+
+<section id="lokasi" class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+📍 Lokasi Pertandingan
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="venue-card">
+<img src="images/g-futsal1.jpeg">
+<h4>Futsal</h4>
+<p>Dewan Futsal IKBN Pekan</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="venue-card">
+<img src="images/g-bola-tampar.png">
+<h4>Bola Tampar</h4>
+<p>Gelanggang Bola Tampar</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="venue-card">
+<img src="images/g-bolajaring-karom.jpeg">
+<h4>Bola Jaring & Karom</h4>
+<p>Siang: Bola Jaring<br>Malam: Karom</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="venue-card">
+<img src="images/g-dam-aji.jpeg">
+<h4>Dam Aji</h4>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="venue-card">
+<img src="images/g-dart.jpeg">
+<h4>Dart</h4>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="venue-card">
+<img src="images/g-sepaktakraw.png">
+<h4>Sepak Takraw</h4>
+</div>
+</div>
 
 </div>
 
@@ -163,9 +196,9 @@ allowfullscreen>
 
 </section>
 
+<!-- DOKUMEN -->
 
-
-<section id="syarat" class="section">
+<section id="dokumen" class="section bg-light">
 
 <div class="container">
 
@@ -176,42 +209,30 @@ allowfullscreen>
 <div class="row g-4">
 
 <div class="col-md-3">
-<a class="doc-card"
-href="https://drive.google.com/drive/folders/1UJWfTYH3HaBGXZ5WXXwfd76-94Y77nRG?usp=sharing"
-target="_blank">
-
+<a class="doc-card" target="_blank"
+href="https://drive.google.com/drive/folders/1UJWfTYH3HaBGXZ5WXXwfd76-94Y77nRG?usp=sharing">
 📜 Syarat Pertandingan
-
 </a>
 </div>
 
 <div class="col-md-3">
-<a class="doc-card"
-href="https://drive.google.com/drive/folders/1CpaWWd8HOH5rU_zF_2aMOrO3-OtX_Bt6?usp=sharing"
-target="_blank">
-
+<a class="doc-card" target="_blank"
+href="https://drive.google.com/drive/folders/1CpaWWd8HOH5rU_zF_2aMOrO3-OtX_Bt6?usp=sharing">
 📝 Borang Pendaftaran
-
 </a>
 </div>
 
 <div class="col-md-3">
-<a class="doc-card"
-href="https://docs.google.com/presentation/d/1AEcVRj52wUTTj7hyUuwv35lEOFEmuRMB/edit"
-target="_blank">
-
+<a class="doc-card" target="_blank"
+href="https://docs.google.com/presentation/d/1AEcVRj52wUTTj7hyUuwv35lEOFEmuRMB/edit?usp=sharing">
 🎤 Slide Teknikal
-
 </a>
 </div>
 
 <div class="col-md-3">
-<a class="doc-card"
-href="https://drive.google.com/drive/folders/177Q4yRBA2HphSubbJYooK2lf3HlQ-rAT?usp=sharing"
-target="_blank">
-
+<a class="doc-card" target="_blank"
+href="https://drive.google.com/drive/folders/177Q4yRBA2HphSubbJYooK2lf3HlQ-rAT?usp=sharing">
 🏆 Logo Kelab ILKBS
-
 </a>
 </div>
 
@@ -221,7 +242,66 @@ target="_blank">
 
 </section>
 
+<!-- PENGINAPAN -->
 
+<section class="section">
+
+<div class="container text-center">
+
+<h2 class="section-title">
+🏨 Penginapan
+</h2>
+
+<a target="_blank"
+class="btn btn-dark btn-lg"
+href="https://docs.google.com/spreadsheets/d/1ul1zpFVHvNAh044Z2yyFyL3o2mjLxLP4pIvd4G6-_wM/edit?usp=sharing">
+Lihat Senarai Penginapan
+</a>
+
+</div>
+
+</section>
+
+<!-- KATERING -->
+
+<section class="section bg-light">
+
+<div class="container text-center">
+
+<h2 class="section-title">
+🍽 Katering
+</h2>
+
+<a target="_blank"
+class="btn btn-warning btn-lg"
+href="https://docs.google.com/document/d/1XsdTuRocdTsR49lXC8Om2dQXOAS83-FY3L6hCQRMdQE/edit?usp=sharing">
+Lihat Senarai Katering
+</a>
+
+</div>
+
+</section>
+
+<!-- PETA -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+📍 Lokasi IKBN Pekan
+</h2>
+
+<iframe
+class="map-frame"
+src="https://maps.google.com/maps?q=3.4703622,103.0981915&z=17&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- URUSETIA -->
 
 <section id="urusetia" class="section bg-light">
 
@@ -234,29 +314,29 @@ target="_blank">
 <div class="row g-4">
 
 <div class="col-md-3">
-<div class="card urusetia-card">
-<h5>Pegawai 1</h5>
+<div class="staff-card">
+<h4>Pegawai 1</h4>
 <p>01X-XXXXXXX</p>
 </div>
 </div>
 
 <div class="col-md-3">
-<div class="card urusetia-card">
-<h5>Pegawai 2</h5>
+<div class="staff-card">
+<h4>Pegawai 2</h4>
 <p>01X-XXXXXXX</p>
 </div>
 </div>
 
 <div class="col-md-3">
-<div class="card urusetia-card">
-<h5>Pegawai 3</h5>
+<div class="staff-card">
+<h4>Pegawai 3</h4>
 <p>01X-XXXXXXX</p>
 </div>
 </div>
 
 <div class="col-md-3">
-<div class="card urusetia-card">
-<h5>Pegawai 4</h5>
+<div class="staff-card">
+<h4>Pegawai 4</h4>
 <p>01X-XXXXXXX</p>
 </div>
 </div>
@@ -267,18 +347,14 @@ target="_blank">
 
 </section>
 
-
-
 <footer>
 
-Sukan Muhibbah ILKBS 2026
-<br>
-Zon Pantai Timur
+<p>Sukan Muhibbah ILKBS 2026</p>
+<p>Zon Pantai Timur</p>
 
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>
