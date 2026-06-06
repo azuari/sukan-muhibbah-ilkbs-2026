@@ -81,6 +81,17 @@ section{
     color:#ffc107;
 }
 
+.custom-navbar{
+    background:rgba(0,0,0,0.85) !important;
+    backdrop-filter:blur(8px);
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
 /* =========================
    HERO
 ========================= */
@@ -132,6 +143,11 @@ section{
 .hero-date{
     margin-top:20px;
     font-size:1.3rem;
+}
+
+.tagline{
+    margin-top:20px;
+    font-size:1.8rem;
 }
 
 /* =========================
@@ -248,7 +264,7 @@ section{
    LIVE SCORE
 ========================= */
 
-.live-score iframe{
+.sheet-frame{
     width:100%;
     height:900px;
 
@@ -370,7 +386,7 @@ section{
    MAP
 ========================= */
 
-.map-container iframe{
+.map-frame{
     width:100%;
     height:500px;
     border:none;
@@ -404,54 +420,45 @@ footer p{
 
 @media(max-width:768px){
 
-    .navbar-container{
-        flex-direction:column;
-        gap:15px;
+    .logo{
+        width:40px;
+        height:40px;
     }
 
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-    }
-
-    .logo-group img{
-        height:50px;
-    }
-
-    .site-title{
-        font-size:1rem;
+    .navbar-brand span{
+        font-size:14px;
     }
 
     .hero{
         min-height:100vh;
-        padding-top:120px;
+        padding-top:90px;
+        padding-left:15px;
+        padding-right:15px;
     }
 
     .hero h1{
-        font-size:2.8rem;
+        font-size:2.5rem;
+        line-height:1.1;
     }
 
     .hero h2{
-        font-size:2rem;
+        font-size:1.8rem;
     }
 
-    .hero-tagline{
-        font-size:1.2rem;
-    }
-
-    .hero-date{
-        font-size:1rem;
+    .tagline{
+        font-size:1.1rem;
     }
 
     /* countdown mobile kekal horizontal */
 
-    .countdown-container{
-        flex-direction:row;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:10px;
-    }
+    #countdown{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:6px;
+    overflow-x:auto;
+   }
 
     .countdown-box{
         width:75px;
