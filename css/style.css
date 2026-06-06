@@ -118,7 +118,19 @@ section{
     color:white;
 }
 
+.hero-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:1;
+}
+
 .hero-content{
+    position:relative;
+    z-index:2;
     max-width:1000px;
     padding:20px;
 }
@@ -135,8 +147,8 @@ section{
     font-weight:700;
 }
 
-.hero-tagline{
-    margin-top:25px;
+.tagline{
+    margin-top:20px;
     font-size:1.8rem;
 }
 
@@ -319,6 +331,39 @@ section{
 }
 
 /* =========================
+   VENUE CARD
+========================= */
+
+.venue-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+    height:100%;
+}
+
+.venue-card:hover{
+    transform:translateY(-8px);
+}
+
+.venue-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.venue-card h4{
+    padding:15px 15px 5px;
+    font-weight:700;
+}
+
+.venue-card p{
+    padding:0 15px 15px;
+    color:#666;
+}
+
+/* =========================
    DOCUMENTS
 ========================= */
 
@@ -437,7 +482,7 @@ footer p{
     }
 
     .hero h1{
-        font-size:2.5rem;
+        font-size:2.2rem;
         line-height:1.1;
     }
 
