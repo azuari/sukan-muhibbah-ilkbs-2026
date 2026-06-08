@@ -439,6 +439,21 @@ section{
 }
 
 /* =========================
+   GALERI
+========================= */
+
+#galeri .btn{
+    padding:15px 35px;
+    font-size:1.1rem;
+    border-radius:15px;
+}
+
+#galeri p{
+    font-size:1.1rem;
+    color:#666;
+}
+
+/* =========================
    FOOTER
 ========================= */
 
