@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Karnival Sukan Muhibbah Kakitangan ILKBS Zon Timur Tahun 2026</title>
+<title>Karnival Sukan Muhibbah TVET ILKBS Zon Timur Tahun 2026</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -16,7 +16,7 @@
 
 <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+<nav class="navbar navbar-expand-xl navbar-dark fixed-top custom-navbar">
 
 <div class="container">
 
@@ -29,7 +29,8 @@
 
 </a>
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
 <span class="navbar-toggler-icon"></span>
 </button>
 
@@ -38,11 +39,13 @@
 <ul class="navbar-nav ms-auto">
 
 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="#livescore">Live Score</a></li>
 <li class="nav-item"><a class="nav-link" href="#jadual">Jadual</a></li>
+<li class="nav-item"><a class="nav-link" href="#livescore">Live Score</a></li>
 <li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
 <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
 <li class="nav-item"><a class="nav-link" href="#dokumen">Dokumen</a></li>
+<li class="nav-item"><a class="nav-link" href="#penginapan">Penginapan</a></li>
+<li class="nav-item"><a class="nav-link" href="#katering">Katering</a></li>
 <li class="nav-item"><a class="nav-link" href="#urusetia">Urusetia</a></li>
 
 </ul>
@@ -63,7 +66,7 @@
 
 <h2>KARNIVAL SUKAN MUHIBBAH </h2>
   
-<h2>KAKITANGAN ILKBS ZON TIMUR </h2>
+<h2> TVET ILKBS ZON TIMUR </h2>
 
 <h3>TAHUN 2026</h3>
 
@@ -72,7 +75,7 @@ Lawan Tetap Kawan
 </p>
 
 <p class="hero-date">
-23 - 25 Oktober 2026<br>
+23 - 24 Oktober 2026<br>
 IKBN Pekan
 </p>
 
@@ -94,39 +97,95 @@ Jadual
 
 </section>
 
-<!-- LIVE SCORE -->
+<!-- JADUAL -->
 
-<section id="livescore" class="section">
+<section id="jadual" class="section">
 
 <div class="container">
 
-<h2 class="section-title">
-🏆 Live Score
-</h2>
+<div class="section-head">
+<span class="section-badge">JADUAL</span>
+<h2 class="section-title">Jadual Keseluruhan</h2>
+</div>
+<p class="section-sub">Semak masa, gelanggang dan padanan bagi semua acara sepanjang 23 - 24 Oktober 2026.</p>
 
+<div class="sheet-card">
+
+<div class="sheet-toolbar">
+<div class="sheet-toolbar-title">
+<i class="fas fa-calendar-days"></i> Oktober 2026
+</div>
+<div class="sheet-actions">
+<button type="button" class="sheet-btn sheet-btn-soft" data-reload="frameJadual">
+<i class="fas fa-rotate-right"></i> Muat Semula
+</button>
+<a class="sheet-btn sheet-btn-dark" target="_blank" rel="noopener"
+href="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/preview">
+<i class="fas fa-up-right-from-square"></i> Buka Penuh
+</a>
+</div>
+</div>
+
+<div class="sheet-body">
 <iframe
+id="frameJadual"
 class="sheet-frame"
-src="https://docs.google.com/spreadsheets/d/17N7YiwIFVp7z97-4aGp2DZ36Dq1uYAwDCfvKNDifgik/preview">
+title="Jadual Keseluruhan"
+loading="lazy"
+src="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/preview">
 </iframe>
+</div>
+
+<p class="sheet-hint"><i class="fas fa-hand-pointer"></i> Skrol dan seret dalam jadual untuk melihat maklumat penuh.</p>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- JADUAL -->
+<!-- LIVE SCORE -->
 
-<section id="jadual" class="section bg-light">
+<section id="livescore" class="section bg-light">
 
 <div class="container">
 
-<h2 class="section-title">
-📅 Jadual Keseluruhan
-</h2>
+<div class="section-head">
+<span class="section-badge">LIVE</span>
+<h2 class="section-title">Live Score</h2>
+</div>
+<p class="section-sub">Pantau keputusan pertandingan secara langsung. Data dikemas kini oleh urusetia.</p>
 
+<div class="sheet-card">
+
+<div class="sheet-toolbar">
+<div class="sheet-toolbar-title">
+<span class="live-dot"></span> Keputusan Terkini
+</div>
+<div class="sheet-actions">
+<button type="button" class="sheet-btn sheet-btn-soft" data-reload="frameScore">
+<i class="fas fa-rotate-right"></i> Muat Semula
+</button>
+<a class="sheet-btn sheet-btn-dark" target="_blank" rel="noopener"
+href="https://docs.google.com/spreadsheets/d/17N7YiwIFVp7z97-4aGp2DZ36Dq1uYAwDCfvKNDifgik/preview">
+<i class="fas fa-up-right-from-square"></i> Buka Penuh
+</a>
+</div>
+</div>
+
+<div class="sheet-body">
 <iframe
+id="frameScore"
 class="sheet-frame"
-src="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/edit?usp=sharing">
+title="Live Score"
+loading="lazy"
+src="https://docs.google.com/spreadsheets/d/17N7YiwIFVp7z97-4aGp2DZ36Dq1uYAwDCfvKNDifgik/preview">
 </iframe>
+</div>
+
+<p class="sheet-hint"><i class="fas fa-hand-pointer"></i> Skrol dan seret dalam jadual untuk melihat maklumat penuh.</p>
+
+</div>
 
 </div>
 
@@ -154,14 +213,6 @@ src="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/ed
 
 <div class="col-md-4">
 <div class="venue-card">
-<img src="images/g-bola-tampar.png">
-<h4>Bola Tampar</h4>
-<p>Gelanggang Bola Tampar</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="venue-card">
 <img src="images/g-bolajaring-karom.jpeg">
 <h4>Bola Jaring & Karom</h4>
 </div>
@@ -183,8 +234,29 @@ src="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/ed
 
 <div class="col-md-4">
 <div class="venue-card">
-<img src="images/g-sepaktakraw.png">
-<h4>Sepak Takraw</h4>
+<img src="images/g-badminton.png" alt="Semambu Badminton Centre">
+<h4>Badminton</h4>
+<p class="venue-name">Semambu Badminton Centre</p>
+<p class="venue-address"><i class="fas fa-location-dot"></i>
+Lot 903, Jalan Haji Ahmad, Taman Tunas Jaya, 25300 Kuantan, Pahang</p>
+<a class="venue-link" target="_blank" rel="noopener"
+href="https://www.google.com/maps/search/?api=1&query=3.8402509,103.3318991">
+<i class="fas fa-map-location-dot"></i> Lihat Peta
+</a>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="venue-card">
+<img src="images/g-pingpong.jpeg" alt="Dewan Ping Pong Stadium Darul Makmur" loading="lazy">
+<h4>Ping Pong</h4>
+<p class="venue-name">Perbadanan Stadium Darul Makmur</p>
+<p class="venue-address"><i class="fas fa-location-dot"></i>
+Jalan Dato Lim Hoe Lek, 25200 Kuantan, Pahang</p>
+<a class="venue-link" target="_blank" rel="noopener"
+href="https://www.google.com/maps/search/?api=1&query=3.8144618,103.3233562">
+<i class="fas fa-map-location-dot"></i> Lihat Peta
+</a>
 </div>
 </div>
 
@@ -207,12 +279,12 @@ src="https://docs.google.com/spreadsheets/d/1e8o_umq19osE65lvOM1Um_RKviY8lliu/ed
 <div class="text-center">
 
 <p class="mb-4">
-Gambar dan aktiviti Karnival Sukan Muhibbah Kakitangan ILKBS Zon Timur 2026.
+Gambar dan aktiviti Karnival Sukan Muhibbah TVET ILKBS Zon Timur 2026.
 </p>
 
 <a
 href="https://drive.google.com/drive/folders/1z-K34z46S03xUta2ohkZxJfLy599MjAA?usp=sharing"
-target="_blank"
+target="_blank" rel="noopener noreferrer"
 class="btn btn-primary btn-lg">
 
 <i class="fas fa-images"></i>
@@ -238,31 +310,35 @@ Lihat Galeri Penuh
 
 <div class="row g-4">
 
-<div class="col-md-3">
-<a class="doc-card" target="_blank"
+<div class="col-6 col-md-3">
+<a class="doc-card" target="_blank" rel="noopener noreferrer"
 href="https://drive.google.com/drive/folders/1UJWfTYH3HaBGXZ5WXXwfd76-94Y77nRG?usp=sharing">
-📜 Syarat Pertandingan
+<span class="doc-icon" aria-hidden="true">📜</span>
+<span class="doc-label">Syarat Pertandingan</span>
 </a>
 </div>
 
-<div class="col-md-3">
-<a class="doc-card" target="_blank"
+<div class="col-6 col-md-3">
+<a class="doc-card" target="_blank" rel="noopener noreferrer"
 href="https://drive.google.com/drive/folders/1CpaWWd8HOH5rU_zF_2aMOrO3-OtX_Bt6?usp=sharing">
-📝 Borang Pendaftaran
+<span class="doc-icon" aria-hidden="true">📝</span>
+<span class="doc-label">Borang Pendaftaran</span>
 </a>
 </div>
 
-<div class="col-md-3">
-<a class="doc-card" target="_blank"
+<div class="col-6 col-md-3">
+<a class="doc-card" target="_blank" rel="noopener noreferrer"
 href="https://docs.google.com/presentation/d/1AEcVRj52wUTTj7hyUuwv35lEOFEmuRMB/edit?usp=sharing">
-🎤 Slide Teknikal
+<span class="doc-icon" aria-hidden="true">🎤</span>
+<span class="doc-label">Slide Teknikal</span>
 </a>
 </div>
 
-<div class="col-md-3">
-<a class="doc-card" target="_blank"
+<div class="col-6 col-md-3">
+<a class="doc-card" target="_blank" rel="noopener noreferrer"
 href="https://drive.google.com/drive/folders/177Q4yRBA2HphSubbJYooK2lf3HlQ-rAT?usp=sharing">
-🏆 Logo Kelab ILKBS
+<span class="doc-icon" aria-hidden="true">🏆</span>
+<span class="doc-label">Logo Kelab ILKBS</span>
 </a>
 </div>
 
@@ -274,7 +350,7 @@ href="https://drive.google.com/drive/folders/177Q4yRBA2HphSubbJYooK2lf3HlQ-rAT?u
 
 <!-- PENGINAPAN -->
 
-<section class="section">
+<section id="penginapan" class="section">
 
 <div class="container text-center">
 
@@ -282,7 +358,7 @@ href="https://drive.google.com/drive/folders/177Q4yRBA2HphSubbJYooK2lf3HlQ-rAT?u
 🏨 Penginapan
 </h2>
 
-<a target="_blank"
+<a target="_blank" rel="noopener noreferrer"
 class="btn btn-dark btn-lg"
 href="https://docs.google.com/spreadsheets/d/1ul1zpFVHvNAh044Z2yyFyL3o2mjLxLP4pIvd4G6-_wM/edit?usp=sharing">
 Lihat Senarai Penginapan
@@ -294,19 +370,34 @@ Lihat Senarai Penginapan
 
 <!-- KATERING -->
 
-<section class="section bg-light">
+<section id="katering" class="section bg-light">
 
-<div class="container text-center">
+<div class="container">
 
-<h2 class="section-title">
-🍽 Katering
-</h2>
+<div class="section-head">
+<span class="section-badge">MAKLUMAT</span>
+<h2 class="section-title">Katering</h2>
+</div>
 
-<a target="_blank"
-class="btn btn-warning btn-lg"
-href="https://docs.google.com/document/d/1XsdTuRocdTsR49lXC8Om2dQXOAS83-FY3L6hCQRMdQE/edit?usp=sharing">
-Lihat Senarai Katering
-</a>
+<div class="info-card">
+
+<div class="info-icon"><i class="fas fa-bag-shopping"></i></div>
+
+<div class="info-content">
+<h3>Makanan Disediakan Secara Bungkusan</h3>
+<p>
+Makanan untuk <strong>semua kontinjen</strong> disediakan pada
+<strong>Majlis Penutup</strong> sahaja, secara <strong>bungkusan (packing)</strong>.
+</p>
+
+<ul class="info-meta">
+<li><i class="fas fa-calendar-day"></i> Sabtu, 24 Oktober 2026</li>
+<li><i class="fas fa-flag-checkered"></i> Majlis Penutup</li>
+<li><i class="fas fa-box-open"></i> Makanan dibungkus</li>
+</ul>
+</div>
+
+</div>
 
 </div>
 
@@ -319,12 +410,12 @@ Lihat Senarai Katering
 <div class="container">
 
 <h2 class="section-title">
-📍 Lokasi IKBN Pekan
+📍 Lokasi Pahang Youth and Sport Complex
 </h2>
 
 <iframe
 class="map-frame"
-src="https://maps.google.com/maps?q=3.4703622,103.0981915&z=17&output=embed">
+src="https://maps.google.com/maps?q=Pahang+Youth+and+Sports+Complex&z=17&output=embed">
 </iframe>
 
 </div>
@@ -362,8 +453,8 @@ src="https://maps.google.com/maps?q=3.4703622,103.0981915&z=17&output=embed">
 <div class="col-md-3">
 <div class="staff-card">
 <h4>Bendahari</h4>
-<h5>Pn. Nurul Haida</h5>
-<p>017-3040034</p>
+<h5>En. Mohd Faiza</h5>
+<p>013-9739732</p>
 </div>
 </div>
 
@@ -383,8 +474,15 @@ src="https://maps.google.com/maps?q=3.4703622,103.0981915&z=17&output=embed">
 
 <footer>
 
-<p>Sukan Muhibbah ILKBS 2026</p>
+<p>Tvet Sukan Muhibbah ILKBS 2026</p>
 <p>Zon Pantai Timur</p>
+
+<div class="footer-bottom">
+<span>&copy; 2026 IKBN Pekan.</span>
+<span>Hak Cipta Terpelihara.</span>
+<span>Dibangunkan oleh Abu Bakar Adnan</span>
+<span>Pelawat: <strong id="visitorCount">-</strong></span>
+</div>
 
 </footer>
 

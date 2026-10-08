@@ -92,6 +92,50 @@ section{
     object-fit:contain;
 }
 
+/* Menu mod hamburger (< 1200px): panel kecil lutsinar, bukan penuh skrin */
+@media (max-width:1199.98px){
+
+    /* backdrop-filter pada bar menghalang kesan kabur pada panel di dalamnya,
+       jadi dimatikan di sini (bar sudah 85% hitam, perbezaannya tak ketara) */
+    nav.custom-navbar{
+        -webkit-backdrop-filter:none;
+        backdrop-filter:none;
+    }
+
+    .custom-navbar .navbar-collapse{
+        position:absolute;
+        top:calc(100% + 6px);
+        right:12px;
+        width:clamp(200px, 55vw, 280px);
+        max-height:60vh;
+        overflow-y:auto;
+        padding:8px;
+        background:rgba(0,0,0,0.62);
+        -webkit-backdrop-filter:blur(14px);
+        backdrop-filter:blur(14px);
+        border:1px solid rgba(255,255,255,0.12);
+        border-radius:18px;
+        box-shadow:0 14px 34px rgba(0,0,0,0.35);
+    }
+
+    .custom-navbar .navbar-nav{
+        margin:0 !important;
+    }
+
+    .custom-navbar .nav-link{
+        padding:10px 14px;
+        border-radius:10px;
+        font-weight:600;
+        color:rgba(255,255,255,0.92);
+    }
+
+    .custom-navbar .nav-link:hover,
+    .custom-navbar .nav-link:focus{
+        background:rgba(255,193,7,0.16);
+        color:#ffc107;
+    }
+}
+
 /* =========================
    HERO
 ========================= */
@@ -273,17 +317,230 @@ section{
 }
 
 /* =========================
-   LIVE SCORE
+   SECTION HEAD (LIVE SCORE & JADUAL)
 ========================= */
 
-.sheet-frame{
-    width:100%;
-    height:900px;
+.section-head{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+}
 
+.section-head .section-title{
+    text-align:left;
+    font-size:3rem;
+    margin:0;
+    color:#14213d;
+    position:relative;
+    padding-bottom:14px;
+}
+
+.section-head .section-title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:64px;
+    height:4px;
+    border-radius:4px;
+    background:linear-gradient(90deg,#d4a017,#ffc107);
+}
+
+.section-badge{
+    background:rgba(255,193,7,0.2);
+    color:#b8860b;
+    font-size:0.8rem;
+    font-weight:800;
+    letter-spacing:2px;
+    padding:8px 16px;
+    border-radius:999px;
+}
+
+.section-sub{
+    color:#6b7280;
+    font-size:1.05rem;
+    margin:0 0 30px;
+}
+
+/* =========================
+   SHEET CARD
+========================= */
+
+.sheet-card{
+    background:white;
+    border-radius:28px;
+    padding:28px;
+    box-shadow:0 10px 35px rgba(20,33,61,0.10);
+    border:1px solid rgba(20,33,61,0.06);
+}
+
+.sheet-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.sheet-toolbar-title{
+    font-size:1.5rem;
+    font-weight:800;
+    color:#14213d;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.live-dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#e53935;
+    box-shadow:0 0 0 0 rgba(229,57,53,0.6);
+    animation:livePulse 1.6s infinite;
+}
+
+@keyframes livePulse{
+    0%{box-shadow:0 0 0 0 rgba(229,57,53,0.6);}
+    70%{box-shadow:0 0 0 10px rgba(229,57,53,0);}
+    100%{box-shadow:0 0 0 0 rgba(229,57,53,0);}
+}
+
+.sheet-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.sheet-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
     border:none;
-    border-radius:20px;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:0.95rem;
+    font-weight:700;
+    padding:10px 18px;
+    border-radius:12px;
+    transition:0.25s;
+}
 
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+.sheet-btn-soft{
+    background:#eef0f4;
+    color:#14213d;
+}
+
+.sheet-btn-dark{
+    background:#14213d;
+    color:white;
+}
+
+.sheet-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(20,33,61,0.2);
+}
+
+.sheet-btn-dark:hover{
+    color:#ffc107;
+}
+
+.sheet-btn.is-loading i{
+    animation:spin 0.8s linear infinite;
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
+
+.sheet-body{
+    border:1px solid #e3e6ec;
+    border-radius:16px;
+    overflow:hidden;
+    background:#fafbfc;
+}
+
+.sheet-frame{
+    display:block;
+    width:100%;
+    height:750px;
+    border:none;
+}
+
+.sheet-hint{
+    margin:14px 0 0;
+    font-size:0.9rem;
+    color:#8a91a0;
+    text-align:center;
+}
+
+/* =========================
+   INFO CARD (KATERING)
+========================= */
+
+.info-card{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    background:white;
+    border-radius:28px;
+    padding:36px;
+    box-shadow:0 10px 35px rgba(20,33,61,0.10);
+    border:1px solid rgba(20,33,61,0.06);
+    border-left:6px solid #ffc107;
+}
+
+.info-icon{
+    flex-shrink:0;
+    width:84px;
+    height:84px;
+    border-radius:50%;
+    background:rgba(255,193,7,0.2);
+    color:#b8860b;
+    font-size:2.2rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.info-content h3{
+    font-size:1.6rem;
+    font-weight:800;
+    color:#14213d;
+    margin-bottom:10px;
+}
+
+.info-content p{
+    font-size:1.1rem;
+    color:#555;
+    line-height:1.7;
+    margin-bottom:16px;
+}
+
+.info-meta{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:0;
+    margin:0;
+}
+
+.info-meta li{
+    background:#eef0f4;
+    color:#14213d;
+    font-weight:700;
+    font-size:0.95rem;
+    padding:8px 16px;
+    border-radius:999px;
+}
+
+.info-meta li i{
+    color:#b8860b;
+    margin-right:6px;
 }
 
 /* =========================
@@ -363,9 +620,98 @@ section{
     color:#666;
 }
 
+.venue-card{
+    display:flex;
+    flex-direction:column;
+}
+
+.venue-card .venue-name{
+    padding-bottom:6px;
+    font-weight:600;
+    color:#14213d;
+}
+
+.venue-card .venue-address{
+    padding-bottom:12px;
+    font-size:0.95rem;
+    line-height:1.6;
+}
+
+.venue-card .venue-address i{
+    color:#b8860b;
+    margin-right:6px;
+}
+
+.venue-link{
+    margin:auto 15px 18px;
+    align-self:flex-start;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#14213d;
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    font-size:0.95rem;
+    padding:10px 18px;
+    border-radius:12px;
+    transition:0.25s;
+}
+
+.venue-link:hover{
+    color:#ffc107;
+    transform:translateY(-2px);
+}
+
 /* =========================
    DOCUMENTS
 ========================= */
+
+.doc-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    height:100%;
+    min-height:150px;
+    padding:26px 18px;
+    background:white;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(20,33,61,0.06);
+    border-radius:22px;
+    box-shadow:0 8px 24px rgba(20,33,61,0.10);
+    color:#14213d;
+    font-size:1.1rem;
+    font-weight:800;
+    line-height:1.3;
+    text-align:center;
+    text-decoration:none;
+    transition:0.25s;
+}
+
+.doc-card:hover,
+.doc-card:focus-visible{
+    color:#14213d;
+    transform:translateY(-6px);
+    box-shadow:0 14px 30px rgba(20,33,61,0.18);
+}
+
+.doc-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:4px;
+    background:linear-gradient(90deg,#d4a017,#ffc107);
+}
+
+.doc-icon{
+    font-size:2.4rem;
+    line-height:1;
+}
 
 .document-grid{
     display:grid;
@@ -474,6 +820,23 @@ footer p{
     color:#ccc;
 }
 
+.footer-bottom{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:6px 28px;
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,0.12);
+    font-size:0.8rem;
+    color:#9aa0a6;
+}
+
+.footer-bottom strong{
+    color:#ffc107;
+    font-weight:700;
+}
+
 /* =========================
    MOBILE
 ========================= */
@@ -541,8 +904,64 @@ footer p{
         height:220px;
     }
 
-    .live-score iframe{
-        height:600px;
+    .section-head .section-title{
+        font-size:2rem;
+    }
+
+    .section-sub{
+        font-size:0.95rem;
+        margin-bottom:20px;
+    }
+
+    .sheet-card{
+        padding:16px;
+        border-radius:20px;
+    }
+
+    .sheet-toolbar-title{
+        font-size:1.2rem;
+    }
+
+    .sheet-actions{
+        width:100%;
+    }
+
+    .sheet-btn{
+        flex:1;
+        justify-content:center;
+        padding:10px 12px;
+    }
+
+    .sheet-frame{
+        height:520px;
+    }
+
+    .info-card{
+        flex-direction:column;
+        text-align:center;
+        padding:24px 20px;
+        border-left:none;
+        border-top:6px solid #ffc107;
+    }
+
+    .info-meta{
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        align-items:center;
+        gap:4px;
+    }
+
+    .doc-card{
+        min-height:128px;
+        padding:20px 12px;
+        font-size:0.95rem;
+    }
+
+    .doc-icon{
+        font-size:2rem;
     }
 
 }
