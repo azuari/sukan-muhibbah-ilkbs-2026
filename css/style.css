@@ -160,6 +160,7 @@ section{
     text-align:center;
 
     color:white;
+    padding:96px 0 36px;
 }
 
 .hero-overlay{
@@ -964,4 +965,95 @@ footer p{
         font-size:2rem;
     }
 
+}
+
+/* =========================
+   IKON HITAM PUTIH (SVG)
+========================= */
+.ico{ width:1.25em; height:1.25em; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; vertical-align:-0.22em; flex-shrink:0; }
+.ico-pin{ width:1.1em; height:1.1em; margin-right:6px; color:#111; vertical-align:-0.18em; }
+.ico-btn{ width:1.3em; height:1.3em; margin-right:6px; }
+.ico-lg{ width:26px; height:26px; }
+.ico-xl{ width:44px; height:44px; stroke-width:1.5; }
+
+.venue-card h4{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.sport-badges{ display:inline-flex; gap:6px; }
+.sport-badge{ display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; background:#111; color:#fff; }
+.sport-badge .ico{ width:22px; height:22px; stroke-width:1.8; vertical-align:0; }
+.venue-card .venue-address i{ display:none; }
+
+.btn-telegram{ display:inline-flex; align-items:center; background:#111; border-color:#111; color:#fff; }
+.btn-telegram:hover,.btn-telegram:focus{ background:#333; border-color:#333; color:#fff; }
+.tg-note{ margin:10px 0 0; font-size:0.85rem; color:#666; }
+
+.info-card-bw .info-icon-bw{ background:#111; color:#fff; }
+.info-card-bw .info-meta li{ background:#f2f2f2; color:#111; border:1px solid #ddd; }
+.info-card-bw .info-meta i{ color:#111; }
+.info-meta-bw{ display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding:0; list-style:none; margin:14px 0; }
+.info-meta-bw li{ padding:8px 14px; border-radius:12px; }
+
+.contact-line{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px; margin:6px 0 16px; }
+.contact-who{ display:inline-flex; align-items:center; gap:8px; font-weight:700; color:#111; }
+.contact-tel{ display:inline-flex; align-items:center; gap:8px; background:#111; color:#fff !important; text-decoration:none; padding:8px 16px; border-radius:999px; font-weight:600; }
+.contact-tel:hover{ background:#333; }
+.staff-card p{ margin-bottom:0; }
+.staff-ico{ display:inline-flex; align-items:center; justify-content:center; width:46px; height:46px; margin-bottom:10px; border-radius:50%; background:#111; color:#fff; }
+.footer-link{ color:#ffc107; text-decoration:underline; }
+
+/* =========================
+   SISIPAN KANAN & PANEL QR
+========================= */
+.qr-tab{ position:fixed; right:0; top:42%; z-index:1200; display:flex; flex-direction:column; align-items:center; gap:8px; padding:14px 9px; border:0; border-radius:14px 0 0 14px; background:linear-gradient(180deg,#14213d,#0b1220); color:#ffc107; font-weight:700; letter-spacing:.12em; box-shadow:-4px 6px 18px rgba(0,0,0,.3); cursor:pointer; border-left:3px solid #ffc107; transition:padding .2s ease, background .2s ease; }
+.qr-tab:hover,.qr-tab:focus-visible{ padding-right:14px; background:linear-gradient(180deg,#1c2f57,#0b1220); outline:none; }
+.qr-tab i{ font-size:1.25rem; }
+.qr-tab span{ writing-mode:vertical-rl; text-orientation:mixed; font-size:.95rem; }
+.qr-tab[hidden]{ display:none; }
+
+.qr-overlay{ position:fixed; inset:0; z-index:99999; background:#0b1220; color:#fff; overflow-y:auto; -webkit-overflow-scrolling:touch; padding:18px 14px 28px; animation:qrMasuk .25s ease; }
+.qr-overlay[hidden]{ display:none; }
+@keyframes qrMasuk{ from{opacity:0; transform:translateX(24px);} to{opacity:1; transform:none;} }
+body.qr-lock{ overflow:hidden; }
+.qr-panel{ position:relative; max-width:860px; margin:0 auto; text-align:center; }
+.qr-close{ position:sticky; top:0; float:right; z-index:2; display:inline-flex; align-items:center; gap:8px; padding:9px 16px; border:1px solid rgba(255,255,255,.35); border-radius:999px; background:rgba(255,255,255,.1); color:#fff; font-weight:600; cursor:pointer; backdrop-filter:blur(6px); }
+.qr-close:hover{ background:rgba(255,255,255,.22); }
+.qr-eyebrow{ clear:both; margin:34px 0 6px; color:#ffc107; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:.78rem; }
+.qr-panel h2{ color:#fff !important; font-weight:800; font-size:1.7rem; margin:0 0 8px; }
+.qr-lead{ color:rgba(255,255,255,.82); margin:0 auto 18px; max-width:560px; }
+.qr-done-note{ display:flex; gap:12px; align-items:flex-start; text-align:left; max-width:520px; margin:0 auto 18px; padding:14px 16px; border-radius:14px; background:rgba(255,193,7,.14); border:1px solid rgba(255,193,7,.45); color:#fff; }
+.qr-done-note[hidden]{ display:none; }
+.qr-done-note i{ color:#ffc107; font-size:1.4rem; margin-top:2px; }
+.qr-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.qr-grid.is-single{ grid-template-columns:minmax(0,440px); justify-content:center; }
+.qr-card{ position:relative; background:#fff; color:#111; border-radius:20px; padding:18px 14px 20px; display:flex; flex-direction:column; align-items:center; gap:10px; }
+.qr-card[hidden]{ display:none; }
+.qr-card h3{ margin:0; font-size:1.15rem; font-weight:800; color:#111 !important; }
+.qr-desc{ margin:0; font-size:.9rem; color:#555; }
+.qr-card img{ width:100%; max-width:320px; height:auto; border-radius:12px; }
+.qr-step{ position:absolute; top:10px; left:12px; width:28px; height:28px; border-radius:50%; background:#111; color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:.9rem; }
+.qr-btn{ display:inline-block; width:100%; max-width:320px; padding:12px 16px; border-radius:12px; background:#111; color:#fff; font-weight:700; text-decoration:none; }
+.qr-btn:hover{ background:#333; color:#fff; }
+.qr-small{ margin:16px 0 0; font-size:.85rem; color:rgba(255,255,255,.7); }
+.qr-small[hidden]{ display:none; }
+.qr-link{ background:none; border:0; padding:0; color:#ffc107; text-decoration:underline; cursor:pointer; font:inherit; }
+.qr-ended{ clear:both; padding:70px 10px 20px; }
+.qr-ended[hidden]{ display:none; }
+.qr-ended p{ color:rgba(255,255,255,.88); max-width:520px; margin:0 auto 12px; }
+.qr-check{ width:84px; height:84px; border-radius:50%; background:#ffc107; color:#111; font-size:2.2rem; display:flex; align-items:center; justify-content:center; margin:0 auto 18px; }
+@media (max-width:640px){
+  .qr-grid{ grid-template-columns:1fr; }
+  .qr-panel h2{ font-size:1.4rem; }
+  .qr-tab{ top:46%; padding:12px 8px; }
+}
+
+/* =========================
+   LOGO HERO
+========================= */
+.hero-jata{ display:block; margin:0 auto 14px; height:84px; width:auto; max-width:none; }
+.hero-logos{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px 18px; margin:34px auto 0; max-width:900px; }
+.hero-logos img{ height:54px; width:auto; object-fit:contain; }
+.doc-icon-ppt{ color:#d24726; }
+@media (max-width:768px){
+  .hero-jata{ height:62px; margin-bottom:10px; }
+  .hero-logos{ gap:10px 14px; margin-top:24px; }
+  .hero-logos img{ height:38px; }
 }

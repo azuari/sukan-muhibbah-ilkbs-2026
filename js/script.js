@@ -197,3 +197,63 @@ document.querySelectorAll("[data-reload]").forEach(function (btn) {
     });
 
 })();
+
+/* SISIPAN KANAN: PENDAFTARAN & KEHADIRAN */
+(function () {
+    const tab = document.getElementById("qrTab");
+    const overlay = document.getElementById("qrOverlay");
+    if (!tab || !overlay) return;
+
+    const KEY = "sm2026_daftar_klik";
+    const TAMAT = new Date("2026-10-25T00:00:00+08:00").getTime(); // paparan ditutup mulai 25 Oktober 2026
+    const aktif = document.getElementById("qrAktif");
+    const tamat = document.getElementById("qrTamat");
+    const kadDaftar = document.getElementById("qrKadDaftar");
+    const stepHadir = document.getElementById("qrStepHadir");
+    const grid = document.getElementById("qrGrid");
+    const nota = document.getElementById("qrDahDaftar");
+    const semulaWrap = document.getElementById("qrSemulaWrap");
+    const footerLink = document.getElementById("qrBukaSemula");
+
+    function sudahTamat() { return Date.now() >= TAMAT; }
+    function sudahDaftar() { try { return localStorage.getItem(KEY) === "1"; } catch (e) { return false; } }
+    function simpanDaftar(v) { try { v ? localStorage.setItem(KEY, "1") : localStorage.removeItem(KEY); } catch (e) {} }
+
+    function render() {
+        if (sudahTamat()) { aktif.hidden = true; tamat.hidden = false; return; }
+        tamat.hidden = true; aktif.hidden = false;
+        const daftar = sudahDaftar();
+        kadDaftar.hidden = daftar;
+        nota.hidden = !daftar;
+        semulaWrap.hidden = !daftar;
+        grid.classList.toggle("is-single", daftar);
+        stepHadir.textContent = daftar ? "✓" : "2";
+    }
+
+    function buka() {
+        render();
+        overlay.hidden = false;
+        document.body.classList.add("qr-lock");
+        overlay.scrollTop = 0;
+        document.getElementById("qrTutup").focus();
+    }
+    function tutup() {
+        overlay.hidden = true;
+        document.body.classList.remove("qr-lock");
+        tab.focus();
+    }
+
+    // Tab hilang selepas tarikh tamat
+    if (sudahTamat()) tab.hidden = true;
+
+    tab.addEventListener("click", buka);
+    document.getElementById("qrTutup").addEventListener("click", tutup);
+    overlay.addEventListener("click", function (e) { if (e.target === overlay) tutup(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !overlay.hidden) tutup(); });
+
+    // Tanda "sudah daftar" apabila butang pendaftaran ditekan
+    document.getElementById("qrBtnDaftar").addEventListener("click", function () { simpanDaftar(true); });
+    document.getElementById("qrPapar").addEventListener("click", function () { simpanDaftar(false); render(); });
+
+    if (footerLink) footerLink.addEventListener("click", function (e) { e.preventDefault(); buka(); });
+})();
