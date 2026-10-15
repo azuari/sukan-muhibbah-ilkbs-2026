@@ -1057,3 +1057,11 @@ body.qr-lock{ overflow:hidden; }
   .hero-logos{ gap:10px 14px; margin-top:24px; }
   .hero-logos img{ height:38px; }
 }
+
+/* Laptop berskrin pendek: padatkan hero supaya baris logo muat (tidak menjejaskan telefon) */
+@media (min-width:769px) and (max-height:900px){
+  .hero{ padding-top:84px; padding-bottom:24px; }
+  .hero-jata{ height:64px; margin-bottom:8px; }
+  .hero-logos{ margin-top:20px; }
+  .hero-logos img{ height:44px; }
+}
